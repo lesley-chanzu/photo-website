@@ -1,1 +1,5 @@
-@import 'tailwindcss'
+@import 'tailwindcss';
+
+*{
+    font-family: 'Edu NSW ACT Cursive', 'cursive';
+}

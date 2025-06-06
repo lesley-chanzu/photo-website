@@ -7,7 +7,7 @@ const NavBar = () => {
     const [darkMode, setDarkMode] = useState(true);
 
     // The Navbar Links 
-    const NavLinks= ['About', 'Services', 'Visit', 'Contact Us']
+    const NavLinks= ['Home', 'About', 'Portfolio', 'Contact', '']
 
     // Adding dark/light mode to the document root
     useEffect(() => {
@@ -43,12 +43,20 @@ const NavBar = () => {
                 <motion.a
                 key={link}
                 whileHover={{ scale: 1.1, color: 'oklch(70.4% 0.04 256.788)'}}
-                transition={{ type: 'spring', stiffness: 1000}}
+                transition={{ type: 'spring', stiffness: 200}}
                 className='relative cursor-pointer'
                 >
                     {link}
                 </motion.a>
             ))}
+            {
+                <img 
+                src='/Flag_of_Kenya.svg'
+                alt="Kenyan flag"
+                className='w-7 h-5 object-cover rounded ml-6'
+                style={{ verticalAlign: 'middle'}}
+                />
+            }
             </div>
             </div>
 
