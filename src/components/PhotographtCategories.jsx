@@ -21,7 +21,7 @@ const PhotographtCategories = () => {
     <div 
     ref={containerRef}
     className="flex flex-col items-center bg-black min-h-screen">
-        <h2 className="text-3xl font-bold mb-8 text-slate-100 font-edu mt-11">Photography Categories</h2>
+        <h2 className="text-3xl font-bold mb-8 text-slate-600 font-ACT mt-11">PHOTOGRAPH CATEGORIES</h2>
         <div>
             {services.map((service) => (
                 <AnimatedService 

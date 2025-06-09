@@ -3,3 +3,17 @@
 *{
     font-family: 'Edu NSW ACT Cursive', 'cursive';
 }
+
+.my-masonry-grid {
+  display: flex;
+  margin-left: -1rem; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 1rem; /* gutter size */
+  background-clip: padding-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}

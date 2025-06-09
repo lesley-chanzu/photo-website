@@ -9,7 +9,7 @@ const Video = () => {
     transition={{ duration: 1 }}
     className='flex justify-center items-center bg-transparent'
     >
-        <div className='w-full h-128 rounded-lg overflow-hidden shadow-lg mt-10'>
+        <div className='w-full h-128 rounded-t-none overflow-hidden shadow-lg mt-20'>
             <video
             src='/isorepublic-free-video-playing-football-beach.mp4'
             className='w-full h-full object-cover'
