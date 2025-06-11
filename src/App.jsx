@@ -4,6 +4,12 @@ import PhotographtCategories from "./components/PhotographtCategories";
 import PhotoGrid from "./components/PhotoGrid";
 import Video from "./components/Video";
 import Contact  from "./components/Contact";
+import Footer from "./components/Footer";
+import About from "./components/About";
+import Portfolio from "./components/Portfolio";
+import ScrollToTop from "./components/ScrollToTop";
+import { useEffect, useState } from "react";
+import Loader from "./components/Loader";
 
 function Home() {
   return (
@@ -16,13 +22,28 @@ function Home() {
 }
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 6000);
+    return () => clearTimeout(timer);
+  })
   return (
     <>
+    {loading && <Loader />}
+    {!loading && (
+      <>
       <NavBar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/contact" element={<Contact />}/>
+        <Route path="/About" element={ <About />}/>
+        <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
+      <Footer />
+    </>
+    )}
     </>
   )
 }

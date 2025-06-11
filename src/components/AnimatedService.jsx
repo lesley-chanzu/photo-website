@@ -9,6 +9,7 @@ const AnimatedService = ({ service, index }) => {
       viewport={{ once: true, amount: 0.4 }}
       transition={{ duration: 0.7, delay: index * 0.12, ease: "easeOut" }}
       className="text-3xl md:text-4xl font-bold text-slate-300  rounded-xl shadow px-8 py-6 mb-8 text-center"
+      style={{ fontFamily: 'sans-serif'}}
     >
       {service}
     </motion.div>
